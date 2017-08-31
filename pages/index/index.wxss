@@ -1,0 +1,4 @@
+/* pages/index/index.wxss */
+.hello-world{
+  font-size: 50rpx;
+}
