@@ -28,3 +28,6 @@
     line-height: 50rpx;
     padding: 10rpx 20rpx;
 }
+button{
+    border: none;
+}
