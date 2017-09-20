@@ -1,9 +1,11 @@
 var hashPasswd = require('../../utils/hashPasswd.js');
+var app = getApp();
 Page({
     data:{
         nuaaId:'',
         passWd:'',
-        isHidden: true
+        isHidden: true,
+        isEn: app.data.isEn
     },
     onLogin: function(e){
         var nuaaId = e.detail.value.nuaaId;
@@ -12,8 +14,8 @@ Page({
         //判断学号或密码是否为空
         if (nuaaId=="" || passWd==""){
             wx.showModal({
-                title: '错误',
-                content: '学号或密码不能为空',
+                title: this.data.isEn?'Error':'错误',
+                content: this.data.isEn ?'Student id or password can not be null':'学号或密码不能为空',
                 showCancel: false
             })
             return;
@@ -24,7 +26,7 @@ Page({
         //判断密码是否正确
         var that = this;
         wx.showLoading({
-            title: '正在登陆',
+            title: that.data.isEn?'Logging in':'正在登陆',
         })
         wx.request({
             url: 'https://proj.rvfu98.com/nuaaweapp/nuaaIdVali.php',
@@ -39,8 +41,8 @@ Page({
             success: function(res){
                 if (res.data.name == null){
                     wx.showModal({
-                        title: '登陆失败',
-                        content: '请检查账号或密码是否正确',
+                        title: that.data.isEn?'login failed':'登陆失败',
+                        content: that.data.isEn ? 'Please check your student id and password' :'请检查账号或密码是否正确',
                         showCancel: false
                     })
                     wx.hideLoading()
