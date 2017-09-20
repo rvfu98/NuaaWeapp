@@ -1,2 +1,16 @@
 <!--pages/index/index.wxml-->
-<text class='hello-world'>Hello world</text>
+<form bindsubmit='onLogin'>
+    <input type='number' placeholder='学号' name='nuaaId' class='input' value='{{nuaaId}}'></input>
+    <input type='text' password placeholder='密码' name='passWd' class='input' value='{{passWd}}'></input>
+    <button type='primary' form-type='submit'>登录</button>
+</form>
+<view hidden='{{isHidden}}' class='info'>
+    <view>姓名: {{data.name}}</view>
+    <view>性别: {{data.gender}}</view>
+    <view>班级: {{data.classnumber}}</view>
+    <view>学号: {{data.number}}</view>
+    <view>学院: {{data.department.name}}</view>
+    <view>专业: {{data.major.name}}</view>
+
+</view>
+<view class='copy'>powered by RVFU98 team</view>
