@@ -1,5 +1,6 @@
-var hashPasswd = require('../../utils/hashPasswd.js');
-var app = getApp();
+var hashPasswd = require('../../utils/hashPasswd.js');  //获取密码加密函数
+var app = getApp();    //获取应用实例
+
 Page({
     data:{
         nuaaId:'',
@@ -39,7 +40,7 @@ Page({
             },
             method:'POST',
             success: function(res){
-                if (res.data.name == null){
+                if (res.data.name == null){    //密码错误
                     wx.showModal({
                         title: that.data.isEn?'login failed':'登陆失败',
                         content: that.data.isEn ? 'Please check your student id and password' :'请检查账号或密码是否正确',
@@ -49,8 +50,7 @@ Page({
                     that.setData({
                         passWd: ''
                     })
-                } else {
-                    console.log(res)
+                } else {    //密码正确
                     that.setData({
                         data: res.data,
                         isHidden: false
@@ -58,9 +58,6 @@ Page({
                     wx.hideLoading()
                 }
             }
-
         })
-
-
     }
 })

@@ -9,7 +9,7 @@
     border-radius: 10rpx;
     font-size: 30rpx;
 }
-.copy{
+.copyright{
     position: absolute;
     bottom: 0;
     left: 200rpx;
