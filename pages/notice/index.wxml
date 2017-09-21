@@ -1,0 +1,7 @@
+<!--pages/notice/index.wxml-->
+<view wx:for="{{notice}}">
+    <view class='list' bindtap='ontap' data-url="{{item[0]}}">
+        <view class='title'>{{item[1]}}</view>
+        <view class='time'>{{item[2]}}</view>
+    </view>
+</view>

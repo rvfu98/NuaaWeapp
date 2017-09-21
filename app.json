@@ -1,14 +1,18 @@
 {
-  "pages" : [
-    "pages/index/index",
-    "test/getSystemInfo/index"
-  ],
-  "window": {
-    "navigationBarBackgroundColor": "#000",
-    "navigationBarTextStyle": "white",
-    "navigationBarTitleText": "南航 Lite",
-    "backgroundColor": "#eeeeee",
-    "backgroundTextStyle": "light",
-    "enablePullDownRefresh": false
-  }
+    "pages": [
+        "pages/home/index",
+        "pages/login/index",
+        "test/getSystemInfo/index",
+        "test/testhtml/index",
+        "pages/notice/index",
+        "pages/noticeDetail/index"
+    ],
+    "window": {
+        "navigationBarBackgroundColor": "#000",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "南航 Lite",
+        "backgroundColor": "#eeeeee",
+        "backgroundTextStyle": "light",
+        "enablePullDownRefresh": false
+    }
 }

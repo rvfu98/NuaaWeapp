@@ -1,0 +1,2 @@
+<button bindtap="notice">教务通知</button>
+<button bindtap="login">登陆</button>
