@@ -4,6 +4,13 @@
     padding: 30rpx;
 }
 
+.title{
+font-size:45rpx;
+font-weight:bold;
+border-bottom:7rpx dotted blue;
+margin-bottom:30rpx;
+}
+
 page{
     font-size: 20rpx !important;
 }

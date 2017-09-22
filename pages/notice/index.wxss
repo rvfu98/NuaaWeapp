@@ -10,6 +10,10 @@
     border-bottom: 1rpx dotted black;
 }
 
+.notice-hover{
+    background: #ddd;
+}
+
 .notice-title{
     font-size: 30rpx;
     font-weight: bold;
