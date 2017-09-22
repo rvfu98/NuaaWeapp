@@ -1,7 +1,13 @@
 <!--pages/notice/index.wxml-->
-<view wx:for="{{notice}}">
+<!-- <view wx:for="{{notice}}">
     <view class='list' bindtap='ontap' data-url="{{item[0]}}">
         <view class='title'>{{item[1]}}</view>
         <view class='time'>{{item[2]}}</view>
     </view>
-</view>
+</view> -->
+<block wx:for='{{notices}}' wx:for-item='notice'>
+    <view class='notice' data-url="{{notice[0]}}" bindtap='onTap'>
+        <text class='notice-title'>{{notice[1]}}</text>
+        <text class='notice-time'>{{notice[2]}}</text>
+    </view>
+</block>

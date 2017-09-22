@@ -1,19 +1,20 @@
 /* pages/notice/index.wxss */
-.list{
-    width: 100%;
-    height: 100rpx;
-    box-sizing: border-box;
-    color: #666;
-    border-bottom: 1rpx solid black;
-    margin-bottom: 10rpx;
-
+.notice{
+    width: 710rpx;
+    height: 70rpx;
+    line-height: 70rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 20rpx;
+    border-bottom: 1rpx dotted black;
 }
 
-.title{
-    font-size: 25rpx;
-}
-
-.time{
+.notice-title{
     font-size: 30rpx;
-    text-align: right;
+    font-weight: bold;
+}
+
+.notice-time{
+    font-size: 25rpx;
 }

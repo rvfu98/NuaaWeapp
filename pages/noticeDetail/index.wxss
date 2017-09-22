@@ -1,2 +1,18 @@
 /* pages/noticeDetail/index.wxss */
 @import "../../utils/wxParse/wxParse.wxss";
+.container{
+    padding: 30rpx;
+}
+
+page{
+    font-size: 20rpx !important;
+}
+
+image{
+    position: fixed;
+    right: 20rpx;
+    bottom: 20rpx;
+    width: 80rpx;
+    height: 80rpx;
+
+}

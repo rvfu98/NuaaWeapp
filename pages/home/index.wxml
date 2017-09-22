@@ -12,5 +12,8 @@
 
 <!--功能按钮  -->
 <view class='functions'>
-
+    <view class='function' bindtap='notice'>
+        <image src='../../icons/activity.png' style="width:100rpx ;height:100rpx;"></image>
+        <text>教务通知</text>
+    </view>
 </view>

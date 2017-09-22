@@ -1,4 +1,6 @@
 <!--pages/noticeDetail/index.wxml-->
 <import src="../../utils/wxParse/wxParse.wxml"/>
-
-<template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+<view class='container'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>
+<image src="../../icons/copy.png" bindtap='copyLink'></image>

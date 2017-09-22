@@ -1,2 +1,2 @@
 <!--pages/me/index.wxml-->
-<text>pages/me/index.wxml</text>
+<button bindtap='login' type='primary'>登录</button>

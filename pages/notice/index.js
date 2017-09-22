@@ -3,7 +3,7 @@ Page({
     data: {
         
     },
-    ontap: function(e){
+    onTap: function(e){
         //console.log(e.currentTarget.dataset.url)
         wx.navigateTo({
             url: '../noticeDetail/index?url=' + e.currentTarget.dataset.url
@@ -15,9 +15,10 @@ Page({
             url: 'https://proj.rvfu98.com/nuaaweapp/notice.php',
             success: function (e) {
                 that.setData({
-                    notice: e.data
+                    notices: e.data
                 })
             }
         })
+        
     }
 })
