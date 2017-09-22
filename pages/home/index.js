@@ -10,4 +10,5 @@ Page({
             url: '../login/index',
         })
     }
+    
 })
