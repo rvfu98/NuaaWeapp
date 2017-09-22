@@ -57,6 +57,9 @@ Page({
                     })
                     wx.hideLoading()
                 }
+            },
+            fail: function(e){
+                console.log(e)
             }
         })
     }
