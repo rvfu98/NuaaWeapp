@@ -1,7 +1,28 @@
-// pages/notice/index.js=
+function updateNotice(that){
+    wx.showNavigationBarLoading();
+    wx.request({
+        url: 'https://proj.rvfu98.com/nuaaweapp/notice.php?type=' + that.data.index,
+        success: function (e) {
+            that.setData({
+                notices: e.data
+            })
+            wx.hideNavigationBarLoading();
+        }
+    })
+}
+
 Page({
     data: {
+        array: ['01 - 教学服务', '02 - 学生培养', '03 - 教学建设', '04 - 教学资源'],
+        index: 0,
         
+    },
+    bindPickerChange: function(e){
+        // console.log(e.detail.value)
+        this.setData({
+            index: e.detail.value
+        })
+        updateNotice(this);
     },
     onTap: function(e){
         //console.log(e.currentTarget.dataset.url)
@@ -11,16 +32,6 @@ Page({
     },
     onLoad: function(){
         var that = this;
-        wx.showNavigationBarLoading();
-        wx.request({
-            url: 'https://proj.rvfu98.com/nuaaweapp/notice.php',
-            success: function (e) {
-                that.setData({
-                    notices: e.data
-                })
-                wx.hideNavigationBarLoading();
-            }
-        })
-        
+        updateNotice(this)
     }
 })

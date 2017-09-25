@@ -22,3 +22,8 @@
 .notice-time{
     font-size: 25rpx;
 }
+
+button{
+    width: 100%;
+
+}

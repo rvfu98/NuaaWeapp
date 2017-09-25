@@ -6,7 +6,8 @@
         "pages/me/index",
         "pages/notice/index",
         "pages/noticeDetail/index",
-        "pages/login/index"
+        "pages/login/index",
+        "pages/test/index"
     ],
     "window": {
         "navigationBarBackgroundColor": "#393a3e",
