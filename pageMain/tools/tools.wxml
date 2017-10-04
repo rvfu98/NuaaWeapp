@@ -9,7 +9,7 @@
 <view class='tool'>
     <block class='tool-list' wx:for="{{tool_list}}">
         <view class='tool-list' data-id='{{item.id}}' bindtap='onTool'>
-            <image class='tool-icon' src='{{"/assert/icon/tools/" + item.id + (item.status ? "0" : "1") + ".png"}}'></image>
+            <image class='tool-icon' src='{{"/assert/icon/tools/" + item.id + (item.status ? "1" : "0") + ".png"}}'></image>
             <text class='tool-name'>{{item.cn_name}}</text>
         </view>
     </block>
