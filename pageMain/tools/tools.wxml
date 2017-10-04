@@ -1,0 +1,16 @@
+<!--pageMain/tools/tools.wxml-->
+    <swiper indicator-dots autoplay circular interval="5000" duration="1000" class='banner'>
+        <block wx:for="{{banner}}">
+            <swiper-item>
+                <image src="{{item}}" class="banner-item" />
+            </swiper-item>
+        </block>
+    </swiper>
+<view class='tool'>
+    <block class='tool-list' wx:for="{{tool_list}}">
+        <view class='tool-list' data-id='{{item.id}}' bindtap='onTool'>
+            <image class='tool-icon' src='{{"/assert/icon/tools/" + item.id + (item.status ? "0" : "1") + ".png"}}'></image>
+            <text class='tool-name'>{{item.cn_name}}</text>
+        </view>
+    </block>
+</view>

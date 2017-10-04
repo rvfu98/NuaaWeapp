@@ -1,57 +1,82 @@
 {
-    "pages": [
-        "pages/home/index",
-        "pages/forum/index",
-        "pages/news/index",
-        "pages/me/index",
-        "pages/notice/index",
-        "pages/noticeDetail/index",
-        "pages/login/index"
-    ],
     "window": {
         "navigationBarBackgroundColor": "#393a3e",
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "南航 Lite",
-        "backgroundColor": "#eeeeee",
-        "backgroundTextStyle": "light",
+        "backgroundColor": "#ddd",
+        "backgroundTextStyle": "dark",
         "enablePullDownRefresh": false
     },
+    "pages": [
+        "pageMain/tools/tools",
+        "pageMain/forum/forum",
+        "pageMain/schedule/schedule",
+        "pageMain/message/message",
+        "pageMain/me/me",
+        "pageTool/schedule/schedule",
+        "pageTool/classSchedule/classSchedule",
+        "pageTool/notice/notice",
+        "pageTool/classroom/classroom",
+        "pageTool/grade/grade",
+        "pageTool/elective/elective",
+        "pageTool/bus/bus",
+        "pageTool/info/info",
+        "pageTool/exam/exam",
+        "pageTool/usedMarket/usedMarket",
+        "pageTool/partTimeJob/partTimeJob",
+        "pageTool/phoneNumber/phoneNumber",
+        "pageTool/link/link",
+        "pageTool/course/course",
+        "pageTool/library/library",
+        "pageTool/electricityBill/electricityBill",
+        "pageTool/wage/wage",
+        "pageTool/ad/ad",
+        "pageTool/news/news",
+        "pageTool/lecture/lecture"
+    ],
     "tabBar": {
         "list": [
             {
-                "pagePath": "pages/home/index",
-                "text": "首页",
-                "iconPath": "icons/home0.png",
-                "selectedIconPath": "icons/home1.png"
+                "pagePath": "pageMain/tools/tools",
+                "text": "工具",
+                "iconPath": "assert/icon/tabBar/tools0.png",
+                "selectedIconPath": "assert/icon/tabBar/tools1.png"
             },
             {
-                "pagePath": "pages/forum/index",
+                "pagePath": "pageMain/forum/forum",
                 "text": "社区",
-                "iconPath": "icons/forum0.png",
-                "selectedIconPath": "icons/forum1.png"
+                "iconPath": "assert/icon/tabBar/forum0.png",
+                "selectedIconPath": "assert/icon/tabBar/forum1.png"
             },
             {
-                "pagePath": "pages/news/index",
+                "pagePath": "pageMain/schedule/schedule",
+                "text": "课程",
+                "iconPath": "assert/icon/tabBar/schedule0.png",
+                "selectedIconPath": "assert/icon/tabBar/schedule1.png"
+            },
+            {
+                "pagePath": "pageMain/message/message",
                 "text": "消息",
-                "iconPath": "icons/news0.png",
-                "selectedIconPath": "icons/news1.png"
+                "iconPath": "assert/icon/tabBar/message0.png",
+                "selectedIconPath": "assert/icon/tabBar/message1.png"
             },
             {
-                "pagePath": "pages/me/index",
+                "pagePath": "pageMain/me/me",
                 "text": "我的",
-                "iconPath": "icons/me0.png",
-                "selectedIconPath": "icons/me1.png"
+                "iconPath": "assert/icon/tabBar/me0.png",
+                "selectedIconPath": "assert/icon/tabBar/me1.png"
             }
         ],
-        "color": "#979797",
+        "color": "#969696",
         "selectedColor": "#45c018",
         "backgroundColor": "#fcfcfc",
-        "borderStyle": "black"
+        "borderStyle": "black",
+        "position": "bottom"
     },
     "networkTimeout": {
-      "request": 3000,
-      "connectSocket": 3000,
-      "uploadFile": 3000,
-      "downloadFile": 3000
+        "request": 20000,
+        "connectSocket": 20000,
+        "uploadFile": 20000,
+        "downloadFile": 20000
     }
 }

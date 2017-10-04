@@ -1,0 +1,44 @@
+/* pageMain/tools/tools.wxss */
+page{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.banner {
+    width: 750rpx;
+    background: #abcdef;
+    flex-grow: 1;
+}
+
+.banner-item{
+    width: 100%;
+}
+
+.tool {
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-top: 15rpx;
+}
+
+.tool-list {
+    box-sizing: border-box;
+    width: 187.5rpx;
+    height: 140rpx;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20rpx 0;
+}
+
+.tool-icon {
+    width: 55rpx;
+    height: 55rpx;
+}
+
+.tool-name {
+    margin-top: 10rpx;
+    font-size: 25rpx;
+}
