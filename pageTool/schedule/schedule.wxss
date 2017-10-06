@@ -1,1 +1,124 @@
-/* pageTools/schedule/schedule.wxss */
+page {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    font-size: 26rpx;
+}
+
+/*选项部分  */
+
+.option {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 8.34%;
+    background: #393a3e;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option-semester, .option-week {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option-semester {
+    width: 350rpx;
+}
+
+.option-week {
+    width: 300rpx;
+}
+
+.option image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.option-setting {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.option-setting image {
+    margin: 10rpx;
+}
+
+/*标头部分  */
+
+.head {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 8.34%;
+    border-bottom: 1px solid #3687be;
+    display: flex;
+    flex-direction: row;
+}
+
+.head-month {
+    box-sizing: border-box;
+    width: 6.67%;
+    border-right: 1px solid #3687be;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.head-day {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5px 0;
+}
+
+/*课程部分  */
+
+.schedule {
+    box-sizing: border-box;
+    width: 750rpx;
+    height: 83.32%;
+}
+
+.schedule-list {
+    box-sizing: border-box;
+}
+
+.schedule-unit {
+    box-sizing: border-box;
+    width: 6.67%;
+    border-right: 1px solid #3687be;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/*课程表部分  */
+.course{
+    box-sizing: border-box;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    font-size: 25rpx;
+}
+
+.course view{
+    box-sizing: border-box;
+    margin: 3px;
+    padding: 12px 5px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

@@ -1,5 +1,4 @@
-/* pageMain/tools/tools.wxss */
-page{
+page {
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -11,7 +10,7 @@ page{
     flex-grow: 1;
 }
 
-.banner-item{
+.banner-item {
     width: 100%;
 }
 

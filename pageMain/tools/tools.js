@@ -1,11 +1,12 @@
-// pageMain/tools/tools.js
+var app = getApp();
 Page({
     data: {
+        //首页工具图标及对应页面的配置选项
         tool_list: [{
             cn_name: "个人课表",
             en_name: "",
             id: "schedule",
-            status: false
+            status: true
         }, {
             cn_name: "其他课表",
             en_name: "",
@@ -47,11 +48,6 @@ Page({
             id: "exam",
             status: false
         }, {
-        //     cn_name: "社区签到",
-        //     en_name: "",
-        //     id: "forum",
-        //     status: false
-        // }, {
             cn_name: "二手买卖",
             en_name: "",
             id: "usedMarket",
@@ -101,22 +97,34 @@ Page({
             en_name: "",
             id: "news",
             status: false
-        },{
+        }, {
             cn_name: "讲座信息",
             en_name: "",
             id: "lecture",
             status: false
-        }],
-        banner: [
-            'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-            'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-        ]
+        }]
     },
-    onTool: function(e){
+    onLoad: function () {
+        //把app设置成数据
+        this.setData({
+            ...app.data
+        });
+        //首页加载的时候向服务器请求banner图片地址
+        var that = this;
+        wx.request({
+            url: app.data.API_URL + 'banner.json',
+            success: function (res) {
+                that.setData({
+                    banner: res.data
+                })
+            }
+        });
+    },
+    onTool: function (e) {
+        //当点击图标的时候，跳转页面
         var id = e.currentTarget.dataset.id;
         wx.navigateTo({
-            url: '/pageTool/' + id + '/' + id
+            url: '/pageTool/' + id + '/' + id,
         })
     }
 })

@@ -1,12 +1,4 @@
 {
-    "window": {
-        "navigationBarBackgroundColor": "#393a3e",
-        "navigationBarTextStyle": "white",
-        "navigationBarTitleText": "南航 Lite",
-        "backgroundColor": "#ddd",
-        "backgroundTextStyle": "dark",
-        "enablePullDownRefresh": false
-    },
     "pages": [
         "pageMain/tools/tools",
         "pageMain/forum/forum",
@@ -34,6 +26,14 @@
         "pageTool/news/news",
         "pageTool/lecture/lecture"
     ],
+    "window": {
+        "navigationBarBackgroundColor": "#393a3e",
+        "navigationBarTextStyle": "white",
+        "navigationBarTitleText": "南航 Lite",
+        "backgroundColor": "#ddd",
+        "backgroundTextStyle": "dark",
+        "enablePullDownRefresh": false
+    },
     "tabBar": {
         "list": [
             {
