@@ -12,7 +12,6 @@
         "pageTool/grade/grade",
         "pageTool/elective/elective",
         "pageTool/bus/bus",
-        "pageTool/info/info",
         "pageTool/exam/exam",
         "pageTool/usedMarket/usedMarket",
         "pageTool/partTimeJob/partTimeJob",
@@ -25,13 +24,19 @@
         "pageTool/ad/ad",
         "pageTool/news/news",
         "pageTool/lecture/lecture",
-        "pageMain/me/login/login"
+        "pageMain/me/login/login",
+        "pageMain/me/info/info",
+        "pageMain/me/share/share",
+        "pageMain/me/advice/advice",
+        "pageMain/me/issues/issues",
+        "pageMain/me/update/update",
+        "pageMain/me/about/about"
     ],
     "window": {
-        "navigationBarBackgroundColor": "#393a3e",
+        "navigationBarBackgroundColor": "#3a3a3a",
         "navigationBarTextStyle": "white",
         "navigationBarTitleText": "南航 Lite",
-        "backgroundColor": "#ddd",
+        "backgroundColor": "#dadada",
         "backgroundTextStyle": "dark",
         "enablePullDownRefresh": false
     },
@@ -70,7 +75,7 @@
         ],
         "color": "#969696",
         "selectedColor": "#45c018",
-        "backgroundColor": "#fcfcfc",
+        "backgroundColor": "#fafafa",
         "borderStyle": "black",
         "position": "bottom"
     },

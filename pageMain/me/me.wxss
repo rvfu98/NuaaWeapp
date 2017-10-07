@@ -8,7 +8,6 @@
     flex-direction: row;
     align-items: center;
     font-size: 35rpx;
-
 }
 
 .user-head{
@@ -62,6 +61,4 @@
     flex-direction: row;
     align-items: center;
     box-sizing: border-box;
-
-
 }

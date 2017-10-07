@@ -1,37 +1,37 @@
-<view class='user' bindtap='onLog'>
+<view class='user' bindtap='onTapHead'>
     <view class='user-head'>
-        <image wx:if="{{isLogged}}" src='{{user_head_url}}'></image>
+        <image src='{{avatarUrl}}'></image>
     </view>
     <view class='user-info'>
         <view wx:if="{{isLogged}}" class='user-name'>{{user_name}}</view>
-        <view wx:if="{{isLogged}}" class='user-id'>ID:{{user_id}}</view>
-        <view wx:if="{{!isLogged}}">未绑定教务处账号</view>
+        <view wx:if="{{isLogged}}" class='user-id'>{{user_id}}</view>
+        <view wx:if="{{!isLogged}}">绑定教务处账号</view>
     </view>
 </view>
 
 <view class='block'>
-    <view class='item' bindtap='onClearCatch'>
-        <view>清除缓存</view>
+    <view class='item' data-id='info'bindtap='onTapMenu' >
+        <view>我的信息</view>
     </view>
-    <view class='item' bindtap='onShareWeapp' style='border-bottom:none;'>
+    <view class='item' data-id='share' style='border-bottom:none;' bindtap='onTapMenu'>
         <view>分享小程序</view>
     </view>
 </view>
 
 <view class='block'>
-    <view class='item' bindtap='onAdvice'>
+    <view class='item' data-id='advice' bindtap='onTapMenu'>
         <view>开发建议</view>
     </view>
-    <view class='item' bindtap='onIssue'>
+    <view class='item' data-id='issues' bindtap='onTapMenu'>
         <view>问题反馈</view>
     </view>
-    <view class='item' bindtap='onUpdate' style='border-bottom:none;'>
+    <view class='item' data-id='update' style='border-bottom:none;' bindtap='onTapMenu'>
         <view>版本更新</view>
     </view>
 </view>
 
 <view class='block'>
-    <view class='item' bindtap='onAboutUs' style='border-bottom:none;'>
+    <view class='item' data-id='about' style='border-bottom:none;' bindtap='onTapMenu'>
         <view>关于我们</view>
     </view>
 </view>

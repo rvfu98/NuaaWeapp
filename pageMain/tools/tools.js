@@ -38,11 +38,6 @@ Page({
             id: "bus",
             status: false
         }, {
-            cn_name: "个人信息",
-            en_name: "",
-            id: "info",
-            status: false
-        }, {
             cn_name: "考试安排",
             en_name: "",
             id: "exam",

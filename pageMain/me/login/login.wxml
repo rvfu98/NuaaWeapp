@@ -1,5 +1,9 @@
-<form bindsubmit='onLogin'>
-    <view class='nuaaid'><input placeholder='学号' placeholder-class='placeholder' auto-focus type='number' bindblur='onNuaaid'></input></view>
-    <view class='passwd'><input password placeholder='密码' placeholder-class='placeholder' bindblur='onPasswd'></input></view>
-    <view class='submit' bindtap='onSubmit'><view>登录</view></view>
+<form bindsubmit='onSubmit'>
+    <view class='nuaaid'>
+        <input placeholder='学号' placeholder-class='placeholder' auto-focus type='number' bindblur='onBlur' name='nuaaid' value='{{nuaaid}}'></input>
+    </view>
+    <view class='passwd'>
+        <input placeholder='密码' placeholder-class='placeholder' password bindconfirm='onConfirm' name='passwd' value='{{passwd}}'></input>
+    </view>
+    <button type='primary' form-type='submit'>登陆</button>
 </form>

@@ -34,11 +34,19 @@
 <!--选项结束  -->
 
 <!--空闲教室开始  -->
-<scroll-view scroll-y>
+<scroll-view scroll-y wx-if="{{hasRoom}}">
     <view class='rooms'>
-        <block wx:for='{{rooms}}' wx:for-index='room_index' wx:for-item='room_item'>
-            <view class='room'><view>{{room_item}}</view></view>
+        <block wx:for='{{rooms}}' wx:for-index='room_index' wx:for-item='room_item' hidden>
+            <view class='room'>
+                <view>{{room_item}}</view>
+            </view>
         </block>
     </view>
 </scroll-view>
 <!--空闲教室结束  -->
+
+<!--无空闲教室提示开始 -->
+<view wx-if="{{!hasRoom}}" class='noRoom'>
+    您所查找的条件无空闲教室
+</view>
+<!--无空闲教室提示结束 -->

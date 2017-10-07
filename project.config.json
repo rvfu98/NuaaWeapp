@@ -43,6 +43,18 @@
 					"name": "登陆页面",
 					"pathName": "pageMain/me/login/login",
 					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "分享小程序",
+					"pathName": "pageMain/me/share/share",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "建议",
+					"pathName": "pageMain/me/advice/advice",
+					"query": ""
 				}
 			]
 		},

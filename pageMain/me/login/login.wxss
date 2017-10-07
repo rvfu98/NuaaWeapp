@@ -3,24 +3,17 @@ view{
     font-size: 30rpx;
 }
 
-.nuaaid, .passwd, .submit{
+.nuaaid, .passwd{
     margin-bottom: 4px;
     width: 750rpx;
     height: 100rpx;
-    border: 1px solid black;
-    border-radius: 2px;
+    border: 1px solid #1aad19;
+    border-radius: 3px;
 }
 
-.submit{
-    background: black;
-    color: white;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+button{
+    height: 100rpx;
 }
-
 input{
     box-sizing: border-box;
     width: 100%;
