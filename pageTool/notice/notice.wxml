@@ -1,2 +1,1 @@
-<!--pageTools/notice/notice.wxml-->
-<text>pageTools/notice/notice.wxml</text>
+<view style='font-size:35rpx;'>您可以在浏览器中输入<text style='color:blue' bindtap='onTapLink'>aao.nuaa.rvfu98.com</text>查看教务通知。</view>

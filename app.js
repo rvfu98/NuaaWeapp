@@ -54,5 +54,23 @@ App({
                 begain_day: '2017/9/1'
             }
         ],
+    },
+    onLaunch: function () {
+        this.getUserInfo();
+    },
+    getUserInfo: function (cb) {
+        var that = this;
+        wx.login({
+            success: function () {
+                wx.getUserInfo({
+                    success: function (res) {
+                        wx.setStorage({
+                            key: 'avatarUrl',
+                            data: res.userInfo.avatarUrl,
+                        })
+                    }
+                })
+            }
+        });
     }
 })

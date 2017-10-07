@@ -1,1 +1,96 @@
-/* pageTool/classroom/classroom.wxss */
+page {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+}
+
+/*选项开始  */
+
+.options {
+    width: 750rpx;
+    height: 200rpx;
+    background: #393a3e;
+    color: white;
+    font-size: 30rpx;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.left {
+    width: 45%;
+    height: 100rpx;
+}
+
+.right {
+    width: 55%;
+    height: 100rpx;
+}
+
+.options view {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.left .value {
+    box-sizing: border-box;
+    width: 185rpx;
+    height: 70rpx;
+    background: black;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.key {
+    width: 68rpx;
+}
+
+.right .value {
+    box-sizing: border-box;
+    width: 185rpx;
+    height: 70rpx;
+    background: black;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+/*空闲教室开始  */
+
+.rooms {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.room {
+    width: 25%;
+    height: 80rpx;
+    font-size: 28rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+}
+
+.room view{
+    width: 100%
+}
+
+scroll-view {
+    width: 750rpx;
+    height: 800rpx;
+    flex-grow: 1;
+}

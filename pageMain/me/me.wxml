@@ -1,2 +1,37 @@
-<!--pageMain/me/me.wxml-->
-<text>pageMain/me/me.wxml</text>
+<view class='user' bindtap='onLog'>
+    <view class='user-head'>
+        <image wx:if="{{isLogged}}" src='{{user_head_url}}'></image>
+    </view>
+    <view class='user-info'>
+        <view wx:if="{{isLogged}}" class='user-name'>{{user_name}}</view>
+        <view wx:if="{{isLogged}}" class='user-id'>ID:{{user_id}}</view>
+        <view wx:if="{{!isLogged}}">未绑定教务处账号</view>
+    </view>
+</view>
+
+<view class='block'>
+    <view class='item' bindtap='onClearCatch'>
+        <view>清除缓存</view>
+    </view>
+    <view class='item' bindtap='onShareWeapp' style='border-bottom:none;'>
+        <view>分享小程序</view>
+    </view>
+</view>
+
+<view class='block'>
+    <view class='item' bindtap='onAdvice'>
+        <view>开发建议</view>
+    </view>
+    <view class='item' bindtap='onIssue'>
+        <view>问题反馈</view>
+    </view>
+    <view class='item' bindtap='onUpdate' style='border-bottom:none;'>
+        <view>版本更新</view>
+    </view>
+</view>
+
+<view class='block'>
+    <view class='item' bindtap='onAboutUs' style='border-bottom:none;'>
+        <view>关于我们</view>
+    </view>
+</view>

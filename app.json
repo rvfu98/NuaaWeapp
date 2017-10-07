@@ -24,7 +24,8 @@
         "pageTool/wage/wage",
         "pageTool/ad/ad",
         "pageTool/news/news",
-        "pageTool/lecture/lecture"
+        "pageTool/lecture/lecture",
+        "pageMain/me/login/login"
     ],
     "window": {
         "navigationBarBackgroundColor": "#393a3e",
@@ -49,7 +50,7 @@
                 "selectedIconPath": "assert/icon/tabBar/forum1.png"
             },
             {
-                "pagePath": "pageMain/schedule/schedule",
+                "pagePath": "pageTool/schedule/schedule",
                 "text": "课程",
                 "iconPath": "assert/icon/tabBar/schedule0.png",
                 "selectedIconPath": "assert/icon/tabBar/schedule1.png"

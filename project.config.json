@@ -12,12 +12,36 @@
 	"projectname": "%E5%8D%97%E8%88%AALite",
 	"condition": {
 		"weapp": {
-			"current": 0,
+			"current": -1,
 			"list": [
 				{
 					"id": 0,
 					"name": "个人课表",
 					"pathName": "pageTool/schedule/schedule",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "教务通知",
+					"pathName": "pageTool/notice/notice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "空闲教室",
+					"pathName": "pageTool/classroom/classroom",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pageMain/me/me",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "登陆页面",
+					"pathName": "pageMain/me/login/login",
 					"query": ""
 				}
 			]

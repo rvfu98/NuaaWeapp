@@ -16,12 +16,12 @@ Page({
             cn_name: "教务通知",
             en_name: "",
             id: "notice",
-            status: false
+            status: true
         }, {
             cn_name: "空闲教室",
             en_name: "",
             id: "classroom",
-            status: false
+            status: true
         }, {
             cn_name: "成绩查询",
             en_name: "",

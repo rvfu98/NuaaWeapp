@@ -1,2 +1,44 @@
-<!--pageTool/classroom/classroom.wxml-->
-<text>pageTool/classroom/classroom.wxml</text>
+<!--选项开始  -->
+<view class='options'>
+    <view class='left'>
+        <view class='key'>校区:</view>
+        <picker bindchange='onCampus' value='{{campus}}' range='{{campuses}}'>
+            <view class='value'>
+                <view>{{campuses[campus]}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class='right'>
+        <view class='key'>日期:</view>
+        <picker mode="multiSelector" bindchange='onDay' value='{{day}}' range='{{days}}'>
+            <view class='value'>
+                <view>{{(day[1] == today[1])? "今天" : ((day[0]?"下":"本") + days[1][day[1]])}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class='left'>
+        <view class='key'>节次:</view>
+        <picker value='{{unit}}' range='{{units}}' bindchange='onUnit'>
+            <view class='value'>
+                <view>{{units[unit]}}</view>
+            </view>
+        </picker>
+    </view>
+    <view class='right'>
+        <view class='key'></view>
+        <view class='value' bindtap='onSubmit'>
+            <view>查询</view>
+        </view>
+    </view>
+</view>
+<!--选项结束  -->
+
+<!--空闲教室开始  -->
+<scroll-view scroll-y>
+    <view class='rooms'>
+        <block wx:for='{{rooms}}' wx:for-index='room_index' wx:for-item='room_item'>
+            <view class='room'><view>{{room_item}}</view></view>
+        </block>
+    </view>
+</scroll-view>
+<!--空闲教室结束  -->
