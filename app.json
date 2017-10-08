@@ -1,7 +1,6 @@
 {
     "pages": [
         "pageMain/tools/tools",
-        "pageMain/forum/forum",
         "pageMain/schedule/schedule",
         "pageMain/message/message",
         "pageMain/me/me",
@@ -32,12 +31,7 @@
                 "iconPath": "assert/icon/tabBar/tools0.png",
                 "selectedIconPath": "assert/icon/tabBar/tools1.png"
             },
-            {
-                "pagePath": "pageMain/forum/forum",
-                "text": "社区",
-                "iconPath": "assert/icon/tabBar/forum0.png",
-                "selectedIconPath": "assert/icon/tabBar/forum1.png"
-            },
+
             {
                 "pagePath": "pageMain/schedule/schedule",
                 "text": "课程",
