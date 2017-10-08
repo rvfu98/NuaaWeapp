@@ -1,66 +1,61 @@
-// pageMain/schedule/schedule.js
+var data = require('./data.js');
+var func = require('./func.js');
+
 Page({
+    func: func,
+    onLoad: function () {
 
-  /**
-   * 页面的初始数据
-   */
-  data: {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-  
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-  
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-  
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-  
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-  
-  }
+    },
+    onShow: function () {
+        this.setData({
+            ...data
+        })
+        this.func.setStudentid(this)
+        this.func.setSemester(this)
+        this.func.setWeek(this);
+        this.func.setDatesAndMonth(this);
+        this.func.setDateAndDay(this);
+        this.func.setCourse(this);
+        //this.func.setDatesAndUnits(this);
+    },
+    onPickSemester: function (e) {
+        this.func.setSemester(this, e.detail.value),
+        this.func.setWeek(this, 1);
+        this.func.setDatesAndMonth(this);
+        this.func.setDateAndDay(this);
+        this.func.setCourse(this);
+        this.func.setDatesAndUnits(this);
+    },
+    onPickWeek: function (e) {
+        this.func.setWeek(this, e.detail.value),
+        this.func.setDatesAndMonth(this);
+        this.func.setDateAndDay(this);
+        this.func.setCourse(this);
+        this.func.setDatesAndUnits(this);
+    },
+    onTapOptionSetting: function(e){
+        var that = this;
+        wx.showActionSheet({
+            itemList: ['回到今天','更新课表', '意见反馈'],
+            success: function(res){
+                switch(res.tapIndex){
+                    case 0:
+                        that.func.setStudentid(that)
+                        that.func.setSemester(that)
+                        that.func.setWeek(that);
+                        that.func.setDatesAndMonth(that);
+                        that.func.setDateAndDay(that);
+                        that.func.setCourse(that);
+                        break;
+                    case 1:
+                        that.func.setCourse(that, true);
+                        break;
+                    case 2:
+                        wx.navigateTo({
+                            url: '../me/issues/issues',
+                        })
+                }
+            }
+        })
+    }
 })

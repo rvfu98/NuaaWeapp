@@ -1,7 +1,7 @@
 Page({
-    oncopy: function () {
+    onTapLink: function () {
         wx.setClipboardData({
-            data: 'https://github.com/rvfu98/NuaaWeapp',
+            data: 'http://phyexp.nuaa.rvfu98.com/',
             success: function () {
                 wx.showToast({
                     title: '链接已复制'

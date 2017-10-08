@@ -1,6 +1,6 @@
 <!--banner轮播图  -->
-<swiper indicator-dots autoplay circular interval="5000" duration="1000" class='banner'>
-    <block wx:for="{{banner}}">
+<swiper indicator-dots autoplay circular interval="5000" duration="1000" class='banner' >
+    <block wx:for="{{banner}}" wx:key=''>
         <swiper-item>
             <image src="{{item}}" class="banner-item" />
         </swiper-item>
@@ -9,7 +9,11 @@
 
 <!--下方图标按钮  -->
 <view class='tool'>
-    <block class='tool-list' wx:for="{{tool_list}}" wx:for-index="tool_index" wx:for-item="tool_item">
+    <view class='tool-list' bindtap='onSchedule'>
+        <image class='tool-icon' src='{{IMAGE_URL+"icon/tools/schedule1.png"}}'></image>
+        <text class='tool-name'>个人课表</text>
+    </view>
+    <block  wx:for="{{tool_list}}" wx:for-index="tool_index" wx:for-item="tool_item" wx:key=''>
         <view class='tool-list' data-id='{{tool_item.id}}' bindtap='onTool'>
             <image class='tool-icon' src='{{IMAGE_URL + "icon/tools/" + tool_item.id + (tool_item.status ? "1" : "0") + ".png"}}'></image>
             <text class='tool-name'>{{tool_item.cn_name}}</text>

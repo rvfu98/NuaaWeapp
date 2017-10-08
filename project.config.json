@@ -17,7 +17,7 @@
 				{
 					"id": 0,
 					"name": "个人课表",
-					"pathName": "pageTool/schedule/schedule",
+					"pathName": "pageMain/schedule/schedule",
 					"query": ""
 				},
 				{
@@ -54,6 +54,12 @@
 					"id": -1,
 					"name": "建议",
 					"pathName": "pageMain/me/advice/advice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人课表",
+					"pathName": "pageMain/me/about/about",
 					"query": ""
 				}
 			]

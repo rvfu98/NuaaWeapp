@@ -1,2 +1,7 @@
-<!--pageMain/me/about/about.wxml-->
-<text>其实是我一个人。\n谢谢您的支持，欢迎您的加入。\neamil:rvfu98@gmail.com</text>
+<view class='line'>
+<view class='line1 '>您好，这个项目是为了应对现在学校里面对外断网而临时开发的，由于时间仓促是技术有限，现在使用上面肯定还是存在很多的不足之处。我们会继续努力，不断改善这个项目，以便给您带来更好的使用体验。</view>
+
+<view class='line2 '> rvfu98 team</view>
+<view class='line3 ' >2017/10/8</view>
+</view>
+<view class='link' bindtap='oncopy'>https://github.com/rvfu98/NuaaWeapp</view>

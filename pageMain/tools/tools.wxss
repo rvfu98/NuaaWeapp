@@ -18,8 +18,10 @@ page {
     width: 750rpx;
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+     flex-wrap: wrap; 
     padding-top: 15rpx;
+    height: 700rpx;
+    align-content: flex-start;
 }
 
 .tool-list {

@@ -2,25 +2,25 @@
 <view class='options'>
     <view class='left'>
         <view class='key'>校区:</view>
-        <picker bindchange='onCampus' value='{{campus}}' range='{{campuses}}'>
+        <picker bindchange='onCampus' value='{{campus}}' range='{{CAMPUSES}}'>
             <view class='value'>
-                <view>{{campuses[campus]}}</view>
+                <view>{{CAMPUSES[campus]}}</view>
             </view>
         </picker>
     </view>
     <view class='right'>
         <view class='key'>日期:</view>
-        <picker mode="multiSelector" bindchange='onDay' value='{{day}}' range='{{days}}'>
+        <picker mode="multiSelector" bindchange='onDay' value='{{day}}' range='{{DAYS}}'>
             <view class='value'>
-                <view>{{(day[1] == today[1])? "今天" : ((day[0]?"下":"本") + days[1][day[1]])}}</view>
+                <view>{{(day[1] == today[1])? "今天" : ((day[0]?"下":"本") + DAYS[1][day[1]])}}</view>
             </view>
         </picker>
     </view>
     <view class='left'>
         <view class='key'>节次:</view>
-        <picker value='{{unit}}' range='{{units}}' bindchange='onUnit'>
+        <picker value='{{unit}}' range='{{UNITS}}' bindchange='onUnit'>
             <view class='value'>
-                <view>{{units[unit]}}</view>
+                <view>{{UNITS[unit]}}</view>
             </view>
         </picker>
     </view>

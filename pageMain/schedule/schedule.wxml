@@ -1,2 +1,56 @@
-<!--pageMain/schedule/schedule.wxml-->
-<text>pageMain/schedule/schedule.wxml</text>
+<!--选项部分开始  -->
+<view class='option'>
+    <picker bindchange='onPickSemester' value="{{semester}}" range="{{SEMESTERS}}" range-key='show_name'>
+        <view class='option-semester'>
+            <view>{{SEMESTERS[semester].show_name}}</view>
+            <view>
+                <image src='https://coding.net/u/rvfu98/p/nuaaweapp/git/raw/master/icon/button/pullDown.png'></image>
+            </view>
+        </view>
+    </picker>
+    <picker bindchange='onPickWeek' value='{{week}}' range='{{WEEKS}}'>
+        <view class='option-week'>
+            <view>第{{WEEKS[week]}}周</view>
+            <view>
+                <image src='https://coding.net/u/rvfu98/p/nuaaweapp/git/raw/master/icon/button/pullDown.png'></image>
+            </view>
+        </view>
+    </picker>
+    <view class='option-setting' bindtap='onTapOptionSetting'>
+        <image src='https://coding.net/u/rvfu98/p/nuaaweapp/git/raw/master/icon/button/3points.png'></image>
+    </view>
+</view>
+<!--选项部分结束  -->
+
+<!--标头部分开始  -->
+<view class='head'>
+    <view class='head-month'>
+        <view>{{month}}月</view>
+    </view>
+    <view class='head-day' wx:for="{{days}}" wx:for-index='day_index' wx:for-item='day_item' wx:key=''>
+        <view class='head-date'>{{dates[day_index]}}</view>
+        <view class='head-week'>周{{DAYS[day_index]}}</view>
+    </view>
+</view>
+<!--标头部分结束  -->
+
+<!--课程框架部分开始  -->
+<view class='schedule'>
+    <view class='schedule-list' wx:for='{{units}}' wx:for-index='unit_index' wx:for-item='unit_item' wx:key='' style='height:{{1/maxUnit*100}}%;{{(unit_item%4)?"":"border-bottom: 1px solid #3687be"}}'>
+        <view class='schedule-unit'>
+            <view>{{unit_item}}</view>
+        </view>
+    </view>
+</view>
+<!--课程框架部分结束  -->
+
+<!--课程内容开始  -->
+<block wx:for='{{courses}}' wx:for-index='course_index' wx:for-item='course_item' wx:key=''>
+<view class='course' style='width:{{(100-6.67)/maxDay}}%;height:{{83.32/maxUnit*course_item.duration}}%;left:{{6.67+(course_item.day-1)*(100-6.67)/maxDay}}%;top:{{16.68+83.32/maxUnit*(course_item.period-1)}}%;z-index:{{course_item.ison_this_week[week]?500:100}};'>
+    <view style='background:{{course_item.ison_this_week[week]?("#"+COLORS[course_item.course_rvfu98_id]):"#ddd"}};'>
+        <text>{{course_item.course_show}}\n@{{course_item.classroom}}</text>
+    </view>
+</view>
+</block>
+
+<!--课程内容结束  -->
