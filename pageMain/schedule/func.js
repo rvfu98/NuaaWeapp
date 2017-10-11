@@ -47,11 +47,11 @@ var setDatesAndMonth = function(that){
     var week = that.data.week;
     var semester_begin = new Date(that.data.SEMESTERS[that.data.semester].begin_day);
     var week_begin = new Date(semester_begin.getTime() + week * (1000 * 3600 * 24 * 7));
-    var week_begin_day = week_begin.getDate();
+    //var week_begin_day = week_begin.getDate();
     var week_begin_month = week_begin.getMonth();
     var dates = new Array();
     for (var i=0; i< 7; i++){
-        dates.push(week_begin_day++);
+        dates.push(new Date((week_begin.getTime() + 1000*3600*24*i)).getDate());
     }
     that.setData({
         dates: dates,
