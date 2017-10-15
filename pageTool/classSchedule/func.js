@@ -25,7 +25,7 @@ var setSemester = function(that, semester){
 }
 
 var setWeek = function(that, week){
-    if (week == null){
+    if (week == null || that.data.semester == that.data.SEMESTER) {
         var now = new Date();
         var semester_begin = new Date(that.data.SEMESTERS[that.data.semester].begin_day);
         var week = Math.floor((now - semester_begin)/(1000*3600*24*7));
@@ -80,7 +80,7 @@ var setCourse = function(that, flag){
         that.func.setDatesAndUnits(that)
     }else{
         wx.showLoading({
-            title: '正在加载',
+            title: '非常慢，耐心等...',
         })
         wx.request({
             url: 'https://proj.rvfu98.com/nuaaweapp/zlxxapi/getClassCourse.php',
