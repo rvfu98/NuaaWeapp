@@ -4,6 +4,7 @@
         "pageMain/schedule/schedule",
         "pageMain/message/message",
         "pageMain/me/me",
+        "pageTool/classSchedule/classSchedule",
         "pageTool/notice/notice",
         "pageTool/classroom/classroom",
         "pageTool/phyexp/phyexp",
