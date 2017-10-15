@@ -114,6 +114,8 @@ page {
 }
 
 .course view{
+    /*发现课表的宽度不一致，所以加上了这一行  */
+    width: 100%;
     box-sizing: border-box;
     margin: 3px;
     padding: 12px 5px;

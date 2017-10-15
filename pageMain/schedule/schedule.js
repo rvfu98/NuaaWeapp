@@ -20,7 +20,7 @@ Page({
     },
     onPickSemester: function (e) {
         this.func.setSemester(this, e.detail.value),
-        this.func.setWeek(this, 1);
+        this.func.setWeek(this, 0);
         this.func.setDatesAndMonth(this);
         this.func.setDateAndDay(this);
         this.func.setCourse(this);
